@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adam Sakowski - Content & Media Strategist</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blue:#200e92;
+  --black:#0A0A0A;
+  --white:#FFFFFF;
+  --off:#F8F7F4;
+  --grey:#888;
+  --gl:#E8E6E1;
+  --cream:#F2F0EB;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--black);overflow-x:hidden}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:18px 56px;background:rgba(255,255,255,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--gl)}
+.nl{font-family:'DM Sans',sans-serif;font-size:13px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--black);text-decoration:none}
+.nm{display:flex;gap:28px}
+.nm a{font-size:11px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey);text-decoration:none;transition:color 0.2s;cursor:pointer}
+.nm a:hover{color:var(--black)}
+.nc{font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--white);text-decoration:none;padding:10px 22px;background:var(--blue);transition:background 0.2s}
+.nc:hover{background:#3311EE}
+
+/* HERO */
+.hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;position:relative;overflow:hidden}
+.hl{display:flex;flex-direction:column;justify-content:flex-end;padding:0 56px 80px;background:var(--white);position:relative;z-index:2}
+.hr{position:relative;overflow:hidden;min-height:100vh;background:#200e92}
+.hr img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:top center;filter:none;opacity:0.88}
+.hr::before{content:'';position:absolute;left:0;top:0;bottom:0;width:70%;background:linear-gradient(to right,var(--white) 0%,rgba(255,255,255,0.85) 20%,rgba(255,255,255,0.4) 45%,rgba(255,255,255,0) 70%);z-index:1}
+.htag{display:inline-flex;align-items:center;gap:10px;font-size:10px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--blue);margin-bottom:32px}
+.htag::before{content:'';width:24px;height:1px;background:var(--blue)}
+h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(56px,8.5vw,116px);line-height:0.88;letter-spacing:-0.01em;color:var(--black);margin-bottom:32px}
+h1 em{font-family:'Playfair Display',serif;font-style:italic;color:var(--blue)}
+.hsub{font-size:14px;line-height:1.8;color:var(--grey);max-width:400px;margin-bottom:44px;font-weight:300}
+.hcta{display:flex;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 26px;font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;transition:all 0.2s;border:none;cursor:pointer}
+.bp{background:var(--blue);color:var(--white)}.bp:hover{background:#3311EE;transform:translateY(-2px)}
+.bg{background:transparent;color:var(--grey);border:1px solid var(--gl)}.bg:hover{border-color:var(--black);color:var(--black);transform:translateY(-2px)}
+
+/* TICKER */
+.ticker{background:var(--blue);padding:12px 0;overflow:hidden;white-space:nowrap}
+.ttrack{display:inline-flex;animation:tick 28s linear infinite}
+.ti{font-family:'Bebas Neue',sans-serif;font-size:14px;letter-spacing:0.1em;color:rgba(255,255,255,0.88);padding:0 26px}
+.ts{color:rgba(255,255,255,0.3)}
+@keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* STATS BAR */
+.sb{background:var(--off);display:flex;overflow-x:auto;scrollbar-width:none;border-bottom:1px solid var(--gl)}
+.sb::-webkit-scrollbar{display:none}
+.si{flex:1;min-width:180px;padding:36px 40px;border-right:1px solid var(--gl)}
+.si:last-child{border-right:none}
+.sn{font-family:'Bebas Neue',sans-serif;font-size:clamp(32px,3.8vw,48px);color:var(--blue);line-height:1}
+.sl{font-size:11px;color:var(--grey);margin-top:5px;text-transform:uppercase;letter-spacing:0.08em}
+.sb2{font-size:10px;color:#bbb;margin-top:3px}
+
+/* SECTIONS */
+section{padding:96px 56px}
+.ey{font-size:10px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--blue);margin-bottom:10px}
+.eyd{color:var(--grey)}
+.st{font-family:'Bebas Neue',sans-serif;font-size:clamp(40px,5vw,64px);line-height:0.95;letter-spacing:-0.01em;margin-bottom:56px;color:var(--black)}
+.std{color:var(--white)}
+
+/* CASE STUDIES */
+#work{background:var(--white)}
+.cases{display:flex;flex-direction:column;gap:2px}
+
+/* CASE ROW - full width clean card */
+.case{background:var(--off);overflow:hidden;border:1px solid var(--gl)}
+.case-inner{display:grid;grid-template-columns:1fr 1fr;min-height:480px}
+.case-inner.flip{direction:rtl}
+.case-inner.flip > *{direction:ltr}
+.case-visual{position:relative;overflow:hidden;background:var(--black);min-height:400px}
+.case-visual img{width:100%;height:100%;object-fit:cover;display:block}
+.case-visual .embed-wrap{width:100%;height:100%;display:flex;flex-direction:column;gap:0;background:var(--black)}
+.case-info{padding:52px;display:flex;flex-direction:column;justify-content:space-between;background:var(--white)}
+.abadge{display:inline-flex;align-items:center;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:4px 10px;background:var(--blue);color:var(--white);margin-bottom:20px;width:fit-content}
+.abadge.free{background:var(--off);color:var(--grey);border:1px solid var(--gl)}
+.cbr{font-family:'Bebas Neue',sans-serif;font-size:44px;letter-spacing:0.02em;color:var(--black);line-height:1;margin-bottom:4px}
+.cnum{font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--grey);margin-bottom:16px}
+.tags{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:20px}
+.tag{font-size:9px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;padding:4px 9px;background:var(--off);color:var(--grey);border:1px solid var(--gl)}
+.cbody{font-size:13px;line-height:1.8;color:#555;margin-bottom:28px;font-weight:300;flex:1}
+.mets{display:flex;gap:24px;flex-wrap:wrap;border-top:1px solid var(--gl);padding-top:24px;align-items:flex-end}
+.mv{font-family:'Bebas Neue',sans-serif;font-size:34px;color:var(--blue);line-height:1}
+.ml{font-size:10px;color:var(--grey);text-transform:uppercase;letter-spacing:0.08em;margin-top:3px}
+.cnote{font-size:11px;color:#bbb;font-style:italic;margin-top:12px}
+
+/* TIKTOK EMBEDS */
+.tiktok-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;height:100%}
+.tiktok-cell{position:relative;overflow:hidden;background:#000;border-right:1px solid #111}
+.tiktok-cell:last-child{border-right:none}
+.tiktok-cell iframe{width:100%;height:100%;border:none;display:block;pointer-events:auto}
+.tiktok-label{position:absolute;bottom:0;left:0;right:0;padding:8px 12px;background:linear-gradient(to top,rgba(0,0,0,0.8),transparent);font-size:9px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.7);z-index:2}
+
+/* PERF TABLE */
+.pt{width:100%;border-collapse:collapse;margin-top:0}
+.pt th{font-size:9px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--grey);padding:0 0 10px;text-align:left;border-bottom:1px solid var(--gl)}
+.pt td{padding:9px 0;border-bottom:1px solid var(--gl);font-size:12px;color:var(--black)}
+.pt td:first-child{color:var(--grey)}
+.gv{font-family:'Bebas Neue',sans-serif;font-size:16px;color:var(--blue) !important;letter-spacing:0.02em}
+
+/* ZECCER full width case */
+.case-full{background:var(--off);border:1px solid var(--gl);padding:56px;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.case-full .cbody{margin-bottom:0}
+
+/* CREATIVE SECTION */
+#creative{background:var(--off)}
+.creative-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:8px}
+.c-card{padding:52px;position:relative;overflow:hidden}
+.c-tosti{background:#F0BC00}
+.c-nacanapa{background:var(--black)}
+.c-unident{background:var(--black);grid-column:span 2;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;padding:52px}
+.cey{font-size:9px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;margin-bottom:18px;opacity:0.45}
+.c-tosti .cey{color:var(--black)}
+.c-nacanapa .cey,.c-unident .cey{color:var(--white)}
+.cti{font-family:'Bebas Neue',sans-serif;font-size:clamp(40px,5vw,64px);line-height:0.88;letter-spacing:-0.01em;margin-bottom:20px}
+.c-tosti .cti{color:var(--black)}
+.c-nacanapa .cti{color:#A68FFF}
+.c-unident .cti{color:var(--white)}
+.cdesc{font-size:13px;line-height:1.75;font-weight:300;max-width:380px}
+.c-tosti .cdesc{color:rgba(0,0,0,0.55)}
+.c-nacanapa .cdesc,.c-unident .cdesc{color:rgba(255,255,255,0.4)}
+.cpill{display:inline-block;font-size:9px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:5px 12px;margin-top:20px}
+.c-tosti .cpill{background:rgba(0,0,0,0.1);color:rgba(0,0,0,0.45)}
+.c-nacanapa .cpill{background:rgba(166,143,255,0.15);color:#A68FFF}
+.c-unident .cpill{background:rgba(34,0,204,0.15);color:var(--blue)}
+.tosti-img-wrap{height:220px;overflow:hidden;margin:-52px -52px 36px}
+.tosti-img-wrap img{width:100%;height:100%;object-fit:cover;object-position:center 30%}
+.u-stats{display:flex;flex-direction:column;gap:14px}
+.u-stat{padding:22px 24px;background:rgba(255,255,255,0.05);border-left:2px solid var(--blue)}
+.u-val{font-family:'Bebas Neue',sans-serif;font-size:44px;color:var(--blue);line-height:1}
+.u-lbl{font-size:10px;color:rgba(255,255,255,0.3);text-transform:uppercase;letter-spacing:0.08em;margin-top:3px}
+.u-sub{font-size:11px;color:rgba(255,255,255,0.18);font-style:italic;margin-top:2px}
+
+/* BRAND WALL */
+#brands{background:var(--white)}
+.bwall{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--gl);margin-top:12px}
+.bb{background:var(--white);padding:24px 16px;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:96px;cursor:pointer;border:none;transition:background 0.2s;text-align:center}
+.bb:hover{background:var(--blue)}
+.bb:hover .bimg{filter:brightness(0) invert(1)}
+.bb:hover .br2{color:rgba(255,255,255,0.6)}
+.bb:hover .bbadge{opacity:0}
+.bimg{max-height:40px;max-width:130px;width:auto;object-fit:contain;filter:opacity(0.75);transition:filter 0.2s}
+.btxt{font-family:'Bebas Neue',sans-serif;font-size:13px;letter-spacing:0.05em;color:rgba(0,0,0,0.55);transition:color 0.2s;line-height:1.2}
+.br2{font-size:9px;color:#ccc;letter-spacing:0.1em;text-transform:uppercase;margin-top:5px;transition:color 0.2s}
+.bbadge{font-size:8px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--blue);margin-top:3px;transition:opacity 0.2s}
+.bfree{font-size:8px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#bbb;margin-top:3px;transition:opacity 0.2s}
+
+/* AGENCY */
+#agency{background:var(--off)}
+.ag{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start}
+.ah2{font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,4vw,54px);line-height:1;color:var(--black);margin-bottom:18px}
+.ah2 span{color:var(--blue)}
+.adesc{font-size:13px;line-height:1.8;color:#555;font-weight:300;margin-bottom:32px}
+.pils{display:flex;flex-direction:column}
+.pil{display:flex;gap:16px;padding:15px 0;border-bottom:1px solid var(--gl)}
+.pil:first-child{border-top:1px solid var(--gl)}
+.pnum{font-family:'Bebas Neue',sans-serif;font-size:13px;color:var(--blue);width:20px;flex-shrink:0;padding-top:1px}
+.ptxt{font-size:13px;color:#444;line-height:1.6}
+.wsec{margin-top:40px}
+.wsec-label{font-size:10px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey);margin-bottom:14px}
+.wgrid{display:flex;flex-direction:column;gap:2px}
+.wcard{background:var(--white);padding:20px 24px;border:1px solid var(--gl)}
+.wtit{font-family:'Bebas Neue',sans-serif;font-size:17px;color:var(--black);letter-spacing:0.02em;margin-bottom:5px}
+.wdesc{font-size:12px;color:var(--grey);line-height:1.6}
+
+/* EDUCATION */
+#education{background:var(--white)}
+.edg{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-bottom:2px}
+.edc{background:var(--off);padding:44px;border:1px solid var(--gl)}
+.edd{font-family:'Bebas Neue',sans-serif;font-size:24px;color:var(--black);letter-spacing:0.02em;margin-bottom:5px}
+.eds{font-size:13px;color:var(--blue);font-weight:500;margin-bottom:14px}
+.edsp{font-size:13px;color:var(--grey);line-height:1.6}
+.cr{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
+.crc2{background:var(--off);padding:24px 28px;border:1px solid var(--gl);display:flex;align-items:center;gap:12px}
+.cdot{width:6px;height:6px;border-radius:50%;background:var(--blue);flex-shrink:0}
+.cname{font-size:12px;color:var(--black);font-weight:500}
+.csrc{font-size:10px;color:var(--grey);margin-top:2px}
+
+/* MODAL */
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,0.7);z-index:500;display:none;align-items:center;justify-content:center;padding:28px;backdrop-filter:blur(8px)}
+.overlay.open{display:flex}
+.modal{background:var(--white);max-width:640px;width:100%;max-height:88vh;overflow-y:auto;padding:48px;position:relative;animation:mIn 0.25s ease;border:1px solid var(--gl)}
+@keyframes mIn{from{transform:translateY(14px);opacity:0}to{transform:translateY(0);opacity:1}}
+.mx{position:absolute;top:18px;right:18px;background:none;border:none;font-size:26px;cursor:pointer;color:var(--grey);line-height:1;transition:color 0.2s}
+.mx:hover{color:var(--black)}
+.mbadge{display:inline-flex;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:4px 10px;background:var(--blue);color:var(--white);margin-bottom:14px}
+.mbadge.free{background:var(--off);color:var(--grey);border:1px solid var(--gl)}
+.mband{font-family:'Bebas Neue',sans-serif;font-size:48px;color:var(--black);letter-spacing:0.02em;line-height:1;margin-bottom:5px}
+.mtype{font-size:12px;color:var(--blue);font-weight:600;letter-spacing:0.05em;margin-bottom:20px}
+.mtags{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:20px}
+.mtag{font-size:9px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:4px 9px;background:var(--off);color:var(--black);border:1px solid var(--gl)}
+.mdesc{font-size:13px;line-height:1.8;color:#444;font-weight:300;margin-bottom:24px}
+.mrl{font-size:9px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey);border-top:1px solid var(--gl);padding-top:20px;margin-bottom:14px}
+.mmets{display:flex;gap:24px;flex-wrap:wrap}
+.mval{font-family:'Bebas Neue',sans-serif;font-size:38px;color:var(--blue);line-height:1}
+.mlbl{font-size:10px;color:var(--grey);text-transform:uppercase;letter-spacing:0.08em;margin-top:2px}
+.mnote{font-size:12px;color:#aaa;font-style:italic;margin-top:10px;line-height:1.6}
+.mlinks{margin-top:16px;display:flex;flex-wrap:wrap;gap:8px}
+.mlink{font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--blue);text-decoration:none;display:inline-flex;align-items:center;gap:4px;padding:8px 14px;border:1.5px solid var(--blue);border-radius:3px;transition:background .18s,color .18s}.mlink:hover{background:var(--blue);color:#fff}
+
+
+
+footer{background:var(--black);padding:40px 56px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px}
+.fn{font-family:'Bebas Neue',sans-serif;font-size:17px;color:var(--white);letter-spacing:0.06em}
+.fsub{font-size:11px;color:rgba(255,255,255,0.3);margin-top:3px}
+.flinks{display:flex;gap:18px}
+.flinks a{font-size:11px;color:rgba(255,255,255,0.35);text-decoration:none;letter-spacing:0.08em;text-transform:uppercase;transition:color 0.2s}
+.flinks a:hover{color:var(--white)}
+
+.fi{opacity:0;transform:translateY(20px);transition:opacity 0.6s ease,transform 0.6s ease}
+.fi.v{opacity:1;transform:none}
+
+@media(max-width:960px){
+  nav{padding:12px 20px}.nm{display:none}
+  .hero{grid-template-columns:1fr}.hr{height:65vh;min-height:unset}
+  .hl,section{padding-left:20px;padding-right:20px}
+  .case-inner,.case-full{grid-template-columns:1fr}
+  .creative-grid,.edg,.ag,.c-unident{grid-template-columns:1fr}
+  .c-unident{grid-column:span 1}
+  .bwall{grid-template-columns:repeat(3,1fr);text-align:center}
+}
+
+@media(max-width:680px){
+  nav{padding:10px 16px}
+  .nm{display:none}
+  .hl,section{padding-left:16px;padding-right:16px}
+
+  /* Hero */
+  .hero{grid-template-columns:1fr}
+  .hr{height:55vh;min-height:unset}
+  .hl{padding-top:60px;padding-bottom:40px}
+  h1{font-size:clamp(48px,12vw,80px)}
+  .htag{font-size:9px}
+  .hsub{font-size:13px}
+  .hcta{flex-direction:column;gap:10px}
+  .hcta .btn{width:100%;text-align:center;box-sizing:border-box}
+
+  /* Stats bar */
+  .sbar{flex-wrap:wrap;gap:16px 24px;padding:20px 16px}
+
+  /* Case studies */
+  .case-inner,.case-full{grid-template-columns:1fr}
+  .case-visual{min-height:260px}
+  .case-info{padding:28px 20px}
+  .cnum{font-size:10px}
+  .cbr{font-size:22px}
+  .mets{gap:16px;flex-wrap:wrap}
+  .mv{font-size:26px}
+  .mlinks{flex-direction:column;gap:8px}
+  .mlink{width:100%;box-sizing:border-box;text-align:center;justify-content:center}
+
+  /* Brands wall */
+  .bwall{grid-template-columns:repeat(2,1fr)}
+
+  /* Private clients */
+  .pc-grid{grid-template-columns:1fr}
+
+  /* Agency */
+  .ag{grid-template-columns:1fr}
+  .ah2{font-size:32px}
+  .pil{flex-direction:column;gap:4px}
+
+  /* Testimonials */
+  section[style*="grid-template-columns:1fr 1fr"]{display:block}
+  section[style*="grid-template-columns:1fr 1fr"] > div{margin-bottom:20px}
+
+  /* About */
+  section#about > div[style*="grid-template-columns"]{display:flex;flex-direction:column-reverse;gap:32px}
+  section#about img{width:100%;max-height:360px;object-fit:cover;object-position:top}
+
+  /* Contact */
+  section#contact{padding:60px 16px}
+  section#contact > div{flex-direction:column;gap:32px}
+  section#contact a[style*="max-width:340px"]{max-width:100%;box-sizing:border-box}
+
+  /* Education */
+  .edg{grid-template-columns:1fr}
+
+  /* General */
+  .fi{padding-left:16px;padding-right:16px}
+  .st{font-size:clamp(28px,8vw,48px)}
+  .private-wrap{padding:40px 16px 60px}
+}
+
+.tt-links{display:flex;flex-direction:column;gap:8px;padding:16px;background:#000}
+.tt-link{display:flex;align-items:center;justify-content:space-between;padding:10px 14px;background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.8);text-decoration:none;font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;transition:background 0.2s}
+.tt-link:hover{background:rgba(255,255,255,0.15);color:#fff}
+.tt-link::after{content:'↗';font-size:14px}
+
+#m-actions{margin-top:16px;display:flex;flex-wrap:wrap;gap:10px;}
+.work-btn{display:inline-flex;align-items:center;gap:6px;padding:11px 22px;background:#200e92;color:#fff;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;border-radius:3px;transition:background .18s;}
+.work-btn:hover{background:#3311EE;}
+.ig-btn{display:inline-flex;align-items:center;gap:7px;padding:10px 18px;border:1.5px solid #ccc;border-radius:3px;text-decoration:none;color:#555;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;transition:border-color .18s,color .18s;}
+.ig-btn:hover{border-color:#200e92;color:#200e92;}
+.ig-btn img{width:14px;height:14px;display:block;}
+.event-btn{display:inline-flex;align-items:center;gap:6px;padding:10px 18px;border:1.5px solid #200e92;color:#200e92;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;border-radius:3px;transition:background .18s,color .18s;}
+.event-btn:hover{background:#200e92;color:#fff;}
+.tt-btn{display:inline-flex;align-items:center;gap:6px;padding:10px 16px;border:1.5px solid #ccc;border-radius:3px;text-decoration:none;color:#555;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;transition:border-color .18s;}
+.tt-btn:hover{border-color:#200e92;color:#200e92;}
+/* Bwall section label */
+.bwall-sect{grid-column:1/-1;padding-bottom:12px;}
+.bwall-sect span{font-size:10px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:#bbb;}
+/* Private clients */
+.private-wrap{padding:0 56px 80px;}
+.private-label{display:block;font-size:10px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:#aaa;padding-top:28px;margin-bottom:28px;border-top:1px solid #e8e6e1;}
+.pc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}.pc-grid>.pc-card:nth-last-child(2):nth-child(3n+1){grid-column:1/2;}.pc-grid>.pc-card:last-child:nth-child(3n+2){grid-column:2/3;}
+.pc-card{border:1px solid #e8e6e1;border-radius:6px;padding:30px 22px 26px;display:flex;flex-direction:column;align-items:center;text-align:center;text-decoration:none;color:inherit;transition:border-color .18s,box-shadow .18s;}
+.pc-card:hover{border-color:#200e92;box-shadow:0 4px 20px rgba(34,0,204,.07);}
+.pc-logo{height:60px;display:flex;align-items:center;justify-content:center;margin-bottom:14px;}
+.pc-logo img{max-height:54px;max-width:130px;object-fit:contain;}
+.pc-logo span{font-family:'Bebas Neue',sans-serif;letter-spacing:1px;color:#0a0a0a;}
+.pc-name{font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#0a0a0a;margin-bottom:4px;}
+.pc-role{font-size:11px;color:#888;line-height:1.5;margin-bottom:20px;flex:1;}
+.pc-cta{display:inline-flex;align-items:center;gap:6px;padding:10px 20px;background:#200e92;color:#fff;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;border-radius:3px;margin-top:auto;width:100%;justify-content:center;box-sizing:border-box;}
+
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#top" class="nl">Adam Sakowski</a>
+  <div class="nm">
+    <a class="navlink" data-target="work">Work</a>
+    <a class="navlink" data-target="brands">Brands</a>
+    
+    <a class="navlink" data-target="agency">Agency</a>
+    <a class="navlink" data-target="education">Education</a>
+    <a class="navlink" data-target="about">About</a>
+    <a class="navlink" data-target="contact">Contact</a>
+  </div>
+  <a href="mailto:sakowski.studio@gmail.com" class="nc" href="#contact">Get in touch</a>
+</nav>
+
+<div id="top"></div>
+<section class="hero">
+  <div class="hl">
+    <div class="htag">Content &amp; Media Strategist · Creative Director &middot; Wroclaw</div>
+    <h1>I FIND<br>THE GAP.<br><em>THEN</em><br>CLOSE IT.</h1>
+    <p class="hsub">Content can look good and still fail to work. I identify what's broken in a brand's communication - the gap between the brand's message and its audience's needs - then close it through clear creative direction and content strategies that resonate and deliver real results.</p>
+    <div class="hcta">
+      <a class="btn bp navlink" data-target="work">View work &darr;</a>
+      <a href="https://instagram.com/sakowski.studio" target="_blank" class="btn bg">@sakowski.studio</a>
+    </div>
+  </div>
+  <div class="hr"><img src="assets/img_6553a66c.png" alt="Adam Sakowski">
+  </div>
+</section>
+
+<div class="ticker">
+  <div class="ttrack">
+    <span class="ti">Content Strategy</span><span class="ts">&middot;</span>
+    <span class="ti">Creative Direction</span><span class="ts">&middot;</span>
+    <span class="ti">TikTok &amp; Instagram</span><span class="ts">&middot;</span>
+    <span class="ti">Campaign Planning</span><span class="ts">&middot;</span>
+    <span class="ti">Brand Strategy</span><span class="ts">&middot;</span>
+    <span class="ti">UGC Campaigns</span><span class="ts">&middot;</span>
+    <span class="ti">ManyChat Automation</span><span class="ts">&middot;</span>
+    <span class="ti">Video Production</span><span class="ts">&middot;</span>
+    <span class="ti">Workshop Trainer</span><span class="ts">&middot;</span>
+    <span class="ti">Content Strategy</span><span class="ts">&middot;</span>
+    <span class="ti">Creative Direction</span><span class="ts">&middot;</span>
+    <span class="ti">TikTok &amp; Instagram</span><span class="ts">&middot;</span>
+    <span class="ti">Campaign Planning</span><span class="ts">&middot;</span>
+    <span class="ti">Brand Strategy</span><span class="ts">&middot;</span>
+    <span class="ti">UGC Campaigns</span><span class="ts">&middot;</span>
+    <span class="ti">ManyChat Automation</span><span class="ts">&middot;</span>
+    <span class="ti">Video Production</span><span class="ts">&middot;</span>
+    <span class="ti">Workshop Trainer</span><span class="ts">&middot;</span>
+  </div>
+</div>
+
+<div class="sb">
+  <div class="si"><div class="sn">+4,922%</div><div class="sl">Views growth</div><div class="sb2">Zeccer &middot; TikTok &middot; Social Bloom</div></div>
+  <div class="si"><div class="sn">+1,286%</div><div class="sl">Reach growth</div><div class="sb2">ZOA Pilates &middot; Instagram &middot; Social Bloom</div></div>
+  <div class="si"><div class="sn">+556%</div><div class="sl">Followers growth</div><div class="sb2">ZOA Pilates &middot; Instagram &middot; Social Bloom</div></div>
+  <div class="si"><div class="sn">+12,809%</div><div class="sl">Saves growth</div><div class="sb2">FC Nalesniki &middot; TikTok &middot; Social Bloom</div></div>
+  <div class="si"><div class="sn">82%</div><div class="sl">Avg comment-to-DM CTR</div><div class="sb2">ManyChat automations &middot; Social Bloom</div></div>
+</div>
+
+<!-- WORK -->
+<section id="work">
+  <div class="fi">
+    <div class="ey">01 - Selected Work</div>
+    <div class="st">Case Studies</div>
+  </div>
+
+  <div class="cases">
+
+    <!-- CASE 01: CHLEBOTEKA -->
+    <div class="case fi">
+      <div class="case-inner">
+        <div class="case-visual"><img src="assets/img_6553a66c.png" alt="Chleboteka"></div>
+        <div class="case-info">
+          <div>
+            <div class="abadge">Social Bloom</div>
+            <div class="cnum">Case 01</div>
+            <div class="cbr">Chleboteka</div>
+            <div class="tags">
+              <span class="tag">Creative Direction</span><span class="tag">Content Strategy</span>
+              <span class="tag">Event Management</span><span class="tag">Influencer Campaign</span>
+            </div>
+            <p class="cbody">During work at Social Bloom, a new creative direction was developed for Chleboteka following its rebrand - <em>Jak po masle</em> (Smooth Like Butter) - helping the brand connect with a newly defined target audience. Work included influencer campaign concepting for the online store and a sold-out product launch event for the new chocolate collection.</p>
+            <div class="mlinks">
+              <a href="https://www.instagram.com/chleboteka/" target="_blank" class="mlink">Check their Instagram</a>
+              <a href="https://www.instagram.com/p/DX_MWxAsYx5/" target="_blank" class="mlink">Check the event</a>
+            </div>
+          </div>
+          <div class="mets" style="gap:20px;align-items:flex-start;">
+            <div style="text-align:center;"><div class="mv" style="font-size:28px;line-height:1.1;display:block;text-align:center;">&#8599;</div><div class="ml" style="text-align:center;">Sales growth*</div></div>
+            <div style="text-align:center;"><div class="mv" style="font-size:28px;line-height:1.1;">Sold out</div><div class="ml">Launch event</div></div>
+            <div style="text-align:center;"><div class="mv" style="font-size:28px;line-height:1.1;">Campaign</div><div class="ml">Online store</div></div>
+          </div>
+          <p class="cnote">* Exact figures withheld out of respect for client data privacy.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CASE 02: FC NALESNIKI -->
+        <!-- CASE 02: FC NALESNIKI -->
+    <div class="case fi">
+      <div class="case-inner flip">
+        <div class="case-visual" style="background:#200e92;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:48px;gap:24px;">
+          <div style="font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,0.5);text-align:center;">Top performing formats</div>
+          <div style="display:flex;flex-direction:column;gap:10px;width:100%;">
+            <a href="https://www.tiktok.com/@fc.nalesniki/video/7623317515942382880" target="_blank" style="display:block;padding:10px 16px;background:rgba(255,255,255,0.12);color:#fff;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;border-radius:3px;text-align:center;border:0.5px solid rgba(255,255,255,0.25);box-sizing:border-box;">Watch: Top Format 1 &rarr;</a>
+            <a href="https://www.tiktok.com/@fc.nalesniki/video/7621101502689561889" target="_blank" style="display:block;padding:10px 16px;background:rgba(255,255,255,0.12);color:#fff;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;border-radius:3px;text-align:center;border:0.5px solid rgba(255,255,255,0.25);box-sizing:border-box;">Watch: Top Format 2 &rarr;</a>
+            <a href="https://www.tiktok.com/@fc.nalesniki/video/7605523250499603734" target="_blank" style="display:block;padding:10px 16px;background:rgba(255,255,255,0.12);color:#fff;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;border-radius:3px;text-align:center;border:0.5px solid rgba(255,255,255,0.25);box-sizing:border-box;">Watch: Top Format 3 &rarr;</a>
+          </div>
+          <a href="https://www.tiktok.com/@fc.nalesniki" target="_blank" style="font-size:10px;color:rgba(255,255,255,0.4);text-decoration:none;letter-spacing:.06em;text-transform:uppercase;">View full profile &rarr;</a>
+        </div>
+        <div class="case-info">
+          <div>
+            <div class="abadge">Social Bloom</div>
+            <div class="cnum">Case 02</div>
+            <div class="cbr">FC Nalesniki</div>
+            <div class="tags">
+              <span class="tag">TikTok Strategy</span>
+              <span class="tag">Format Development</span>
+              <span class="tag">Performance Analysis</span>
+            </div>
+            <p class="cbody">During work at Social Bloom, a TikTok strategy was built to grow brand recognition by tapping into the real needs and daily habits of the target audience. Content was built around POVs and voiceovers — incredibly engaging formats that people genuinely wanted to watch, save, and share.</p>
+          </div>
+          <div class="mets">
+            <div><div class="mv">+213%</div><div class="ml">Saves growth</div></div>
+            <div><div class="mv">+76%</div><div class="ml">Views growth</div></div>
+            <div><div class="mv">100k+</div><div class="ml">Top format reach</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<div class="case fi">
+      <div class="case-inner">
+        <div class="case-visual" style="background:#200e92;display:flex;flex-direction:column;justify-content:center;padding:48px;gap:24px;"><div>
+          <div style="font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:16px;">KPI — Mar/Apr vs Dec-Feb</div>
+          <table style="width:100%;border-collapse:collapse;">
+            <thead><tr style="border-bottom:0.5px solid rgba(255,255,255,0.2);">
+              <th style="text-align:left;padding:6px 0;color:rgba(255,255,255,0.4);font-size:9px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;">KPI</th>
+              <th style="text-align:right;padding:6px 4px;color:rgba(255,255,255,0.4);font-size:9px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;">Before</th>
+              <th style="text-align:right;padding:6px 4px;color:rgba(255,255,255,0.4);font-size:9px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;">After</th>
+              <th style="text-align:right;padding:6px 0;color:rgba(255,255,255,0.4);font-size:9px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;">Growth</th>
+            </tr></thead>
+            <tbody>
+              <tr style="border-bottom:0.5px solid rgba(255,255,255,0.08);">
+                <td style="padding:9px 0;color:rgba(255,255,255,0.7);font-size:11px;">Impressions</td>
+                <td style="text-align:right;padding:9px 4px;color:rgba(255,255,255,0.35);font-size:11px;">433</td>
+                <td style="text-align:right;padding:9px 4px;color:rgba(255,255,255,0.7);font-size:11px;">21 750</td>
+                <td style="text-align:right;padding:9px 0;font-family:'Bebas Neue',sans-serif;font-size:15px;color:#fff;letter-spacing:.02em;">+4,922%</td>
+              </tr>
+              <tr style="border-bottom:0.5px solid rgba(255,255,255,0.08);">
+                <td style="padding:9px 0;color:rgba(255,255,255,0.7);font-size:11px;">Likes</td>
+                <td style="text-align:right;padding:9px 4px;color:rgba(255,255,255,0.35);font-size:11px;">17</td>
+                <td style="text-align:right;padding:9px 4px;color:rgba(255,255,255,0.7);font-size:11px;">480</td>
+                <td style="text-align:right;padding:9px 0;font-family:'Bebas Neue',sans-serif;font-size:15px;color:#fff;letter-spacing:.02em;">+2,724%</td>
+              </tr>
+              <tr style="border-bottom:0.5px solid rgba(255,255,255,0.08);">
+                <td style="padding:9px 0;color:rgba(255,255,255,0.7);font-size:11px;">Comments</td>
+                <td style="text-align:right;padding:9px 4px;color:rgba(255,255,255,0.35);font-size:11px;">0.44</td>
+                <td style="text-align:right;padding:9px 4px;color:rgba(255,255,255,0.7);font-size:11px;">8</td>
+                <td style="text-align:right;padding:9px 0;font-family:'Bebas Neue',sans-serif;font-size:15px;color:#fff;letter-spacing:.02em;">+1,718%</td>
+              </tr>
+              <tr>
+                <td style="padding:9px 0;color:rgba(255,255,255,0.7);font-size:11px;">Saves</td>
+                <td style="text-align:right;padding:9px 4px;color:rgba(255,255,255,0.35);font-size:11px;">0.33</td>
+                <td style="text-align:right;padding:9px 4px;color:rgba(255,255,255,0.7);font-size:11px;">42.6</td>
+                <td style="text-align:right;padding:9px 0;font-family:'Bebas Neue',sans-serif;font-size:15px;color:#fff;letter-spacing:.02em;">+12,809%</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div style="font-size:9px;color:rgba(255,255,255,0.25);letter-spacing:.04em;margin-top:16px;">Data calculated from public TikTok analytics</div></div>
+        <div class="case-info">
+          <div>
+            <div class="abadge">Social Bloom</div>
+            <div class="cnum">Case 03</div>
+            <div class="cbr">Zeccer</div>
+            <div class="tags">
+              <span class="tag">TikTok Strategy</span><span class="tag">Format Development</span><span class="tag">Content Direction</span>
+            </div>
+            <p class="cbody">Zeccer needed awareness for a printing service inside Zabka stores with zero brand recognition. I built a TikTok-native strategy connecting resonant formats with subconscious education about the service. The content felt organic to the platform while delivering the brand message - people learned the service existed without being sold to.</p>
+            <div class="mlinks">
+              <a href="https://www.tiktok.com/@zeccer.polska/video/7622953825816546593" target="_blank" class="mlink">TikTok 1</a>
+              <a href="https://www.tiktok.com/@zeccer.polska/video/7623684676170878240" target="_blank" class="mlink">TikTok 2</a>
+              <a href="https://www.tiktok.com/@zeccer.polska/video/7613049427137187094" target="_blank" class="mlink">TikTok 3</a>
+            </div>
+          </div>
+          <div class="mets">
+            <div><div class="mv">+12,809%</div><div class="ml">Saves growth</div></div>
+            <div><div class="mv">+4,922%</div><div class="ml">Impressions</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CASE 04: ZOA PILATES -->
+    <div class="case fi">
+      <div class="case-inner flip">
+        <div class="case-visual" style="background:#e5e0d4;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:48px;gap:20px;text-align:center;"><div style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:20px;flex:1;justify-content:center;">
+          <img src="assets/img_6c6c838f.png" alt="ZOA Pilates" style="height:80px;object-fit:contain;opacity:0.85;">
+          <div style="opacity:0.2;height:0.5px;width:60px;background:#000;"></div>
+          <div>
+            <div style="font-family:'Bebas Neue',sans-serif;font-size:52px;color:#200e92;line-height:1;">+556%</div>
+            <div style="font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:rgba(0,0,0,0.5);margin-top:4px;">Followers in 60 days</div>
+          </div>
+          <div>
+            <div style="font-family:'Bebas Neue',sans-serif;font-size:52px;color:#200e92;line-height:1;">+1,286%</div>
+            <div style="font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:rgba(0,0,0,0.5);margin-top:4px;">Reach growth</div>
+          </div>
+        </div>
+        <a href="https://www.instagram.com/zoa.pilates.studio/" target="_blank" style="display:inline-block;padding:10px 20px;background:#fff;color:#200e92;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;border-radius:3px;margin-top:auto;">CHECK THEIR INSTAGRAM &rarr;</a></div>
+        <div class="case-info">
+          <div>
+            <div class="abadge">Social Bloom</div>
+            <div class="cnum">Case 04</div>
+            <div class="cbr">ZOA Pilates</div>
+            <div class="tags">
+              <span class="tag">Launch Campaign</span><span class="tag">Content Strategy</span><span class="tag">Instagram Growth</span>
+            </div>
+            <p class="cbody">Full launch campaign for ZOA Pilates - a premium reformer and wellness studio. Built the content strategy from zero: brand voice, content pillars, visual direction. 74.5% of impressions came from non-followers, validating the discoverability approach.</p>
+          </div>
+          <div class="mets">
+            <div><div class="mv">+556%</div><div class="ml">Followers in 60 days</div></div>
+            <div><div class="mv">+1,286%</div><div class="ml">Reach growth</div></div>
+          </div>
+          <p class="cnote">Verified via Instagram Insights</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CASE 05: BESTICK -->
+    <div class="case fi">
+      <div class="case-inner">
+        <div class="case-visual" style="background:#fca0f4;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:48px;text-align:center;gap:24px;">
+          <div>
+            <div style="font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,4vw,56px);color:#1a0020;line-height:0.95;margin-bottom:10px;">FORK<br>AROUND<br>AND FIND<br>OUT.</div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(26,0,32,0.45);">Stockholm startup</div>
+          </div>
+          <a href="https://drive.google.com/file/d/1ISRqjjJlYl5J5948clDX_evLFzX-PPBy/view?usp=sharing" target="_blank" style="display:inline-block;padding:10px 24px;background:#1a0020;color:#fca0f4;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;border-radius:3px;text-align:center;">CLICK TO SEE MY WORK &rarr;</a>
+        </div>
+        <div class="case-info">
+          <div>
+            <div class="abadge free">Freelance</div>
+            <div class="cnum">Case 05</div>
+            <div class="cbr">Bestick</div>
+            <div class="tags">
+              <span class="tag">Full-Stack Social</span><span class="tag">Creative Direction</span>
+              <span class="tag">Offline Activation</span><span class="tag">Zero Budget</span>
+            </div>
+            <p class="cbody">Stockholm food events startup. Solely responsible for all social media and marketing - creative direction, video production, editing, community management, newsletter, and B2B materials. Designed and ran an offline awareness campaign using QR-coded posters across high-traffic Stockholm locations.</p>
+            <div class="mlinks">
+              <a href="https://drive.google.com/file/d/1ISRqjjJlYl5J5948clDX_evLFzX-PPBy/view?usp=sharing" target="_blank" class="mlink">Click to see my work</a>
+            </div>
+          </div>
+          <div class="mets">
+            <div><div class="mv">25%</div><div class="ml">Scan to app CVR</div></div>
+            <div><div class="mv">190</div><div class="ml">QR scans</div></div>
+            <div><div class="mv">$0</div><div class="ml">Budget</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CASE 06: UNIDENT UNION -->
+    <div class="case fi">
+      <div class="case-inner flip">
+        <div class="case-visual" style="background:#200e92;display:flex;flex-direction:column;justify-content:space-between;padding:48px;"><div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:24px;">
+          <div style="text-align:center;border-bottom:0.5px solid rgba(255,255,255,0.15);padding-bottom:24px;">
+            <div style="font-family:'Bebas Neue',sans-serif;font-size:64px;color:#fff;line-height:1">82%</div>
+            <div style="font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,0.6);margin-top:6px;">Avg comment-to-DM CTR</div>
+            <div style="font-size:9px;color:rgba(255,255,255,0.3);margin-top:3px;">Across 3 active automations</div>
+          </div>
+          <div style="text-align:center;">
+            <div style="font-family:'Bebas Neue',sans-serif;font-size:64px;color:#fff;line-height:1">93%</div>
+            <div style="font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,0.6);margin-top:6px;">Peak CTR single automation</div>
+            <div style="font-size:9px;color:rgba(255,255,255,0.3);margin-top:3px;">Keyword-triggered DM sequence</div>
+          </div>
+        </div></div>
+        <div class="case-info">
+          <div>
+            <div class="abadge">Social Bloom</div>
+            <div class="cnum">Case 06</div>
+            <div class="cbr">Unident Union</div>
+            <div class="tags">
+              <span class="tag">ManyChat Automation</span><span class="tag">Content Automation</span>
+              <span class="tag">Lead Generation</span><span class="tag">Instagram Funnels</span>
+            </div>
+            <p class="cbody">ManyChat automation architecture for Unident Union and Illustre - two premium health and aesthetic medicine brands. Keyword-triggered DM sequences and comment-to-DM funnels built to convert content engagement into qualified leads, achieving an average 82% comment-to-DM CTR across active automations.</p>
+          </div>
+          <div class="mets">
+            <div><div class="mv">82%</div><div class="ml">Avg comment CTR</div></div>
+            <div><div class="mv">93%</div><div class="ml">Peak automation CTR</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CASE 07: TOSTI -->
+    <div class="case fi">
+      <div class="case-inner">
+        <div class="case-visual" style="position:relative;overflow:hidden;min-height:480px;">
+          <img style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;" src="assets/img_6553a66c.png" alt="Tosti">
+          <div style="position:absolute;inset:0;background:rgba(0,0,0,0.45);display:flex;flex-direction:column;justify-content:center;align-items:center;padding:48px;gap:24px;text-align:center;">
+            <div style="text-align:center;">
+              <div style="font-family:'Bebas Neue',sans-serif;font-size:clamp(48px,6vw,80px);line-height:0.88;color:#fff;margin-bottom:12px;">IM SO<br>TOSTI.</div>
+              <div style="font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,0.6);">Pre-launch campaign concept</div>
+            </div>
+            <a href="https://www.instagram.com/tosti.streetfood/" target="_blank" style="display:inline-block;padding:10px 20px;background:#fff;color:#200e92;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;border-radius:3px;text-align:center;">CHECK INSTAGRAM &rarr;</a>
+          </div>
+        </div>
+        <div class="case-info">
+          <div>
+            <div class="abadge">Social Bloom</div>
+            <div class="cnum">Case 07</div>
+            <div class="cbr">Tosti</div>
+            <div class="tags">
+              <span class="tag">Opening Campaign</span><span class="tag">Creative Direction</span><span class="tag">Content Strategy</span>
+            </div>
+            <p class="cbody">Pre-launch creative campaign for Tosti, a new food venue in Wroclaw. The concept 'IM SO TOSTI' was a teaser campaign building anticipation before opening - covering opening campaign strategy, creative direction, and content execution.</p>
+          </div>
+          <div class="mets">
+            <div><div class="mv">Opening</div><div class="ml">Campaign</div></div>
+            <div><div class="mv">Creative</div><div class="ml">Direction</div></div>
+            <div><div class="mv">Content</div><div class="ml">Strategy</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  </div>
+</section>
+
+
+
+<!-- CREATIVE CONCEPTS -->
+
+
+<!-- AGENCY -->
+
+<section class="private-wrap" id="private-clients">
+  <span class="private-label">Private &amp; Academic Clients</span>
+  <div class="pc-grid" style="display:grid;grid-template-columns:repeat(6,1fr);gap:22px;">
+
+    <a class="pc-card" style="grid-column:span 2;" href="https://drive.google.com/file/d/1ISRqjjJlYl5J5948clDX_evLFzX-PPBy/view?usp=sharing" target="_blank">
+      <div class="pc-logo"><span style="font-family:'Bebas Neue',sans-serif;font-size:26px;">BESTICK</span></div>
+      <div class="pc-name">Bestick</div>
+      <div class="pc-role">Full-Stack Social · Stockholm Startup</div>
+      <span class="pc-cta">CLICK TO SEE MY WORK &rarr;</span>
+    </a>
+
+    <a class="pc-card" style="grid-column:span 2;" href="https://drive.google.com/file/d/14EbUdjNIgio-Py7ShrQrD98aPaBaL-J1/view?usp=sharing" target="_blank">
+      <div class="pc-logo"><img src="assets/img_4d005108.png" alt="Fer Koffie" style="max-height:54px;max-width:130px;object-fit:contain;"></div>
+      <div class="pc-name">Fer Koffie</div>
+      <div class="pc-role">Content &amp; Media Strategy · Master's Thesis</div>
+      <span class="pc-cta">CLICK TO SEE MY WORK &rarr;</span>
+    </a>
+
+    <a class="pc-card" style="grid-column:span 2;" href="https://drive.google.com/file/d/1vJzr7ODIrOqmgtMFY5pH2JxpWcy9jpRZ/view?usp=sharing" target="_blank">
+      <div class="pc-logo"><span style="font-family:'Bebas Neue',sans-serif;font-size:18px;">NHL STENDEN</span></div>
+      <div class="pc-name">NHL Stenden</div>
+      <div class="pc-role">Content Strategy · Leeuwarden, Netherlands</div>
+      <span class="pc-cta">CLICK TO SEE MY WORK &rarr;</span>
+    </a>
+
+    <a class="pc-card" style="grid-column:span 3;" href="https://drive.google.com/file/d/19imhlZb22igWB63kvEkyYdE8HLH88bXc/view?usp=sharing" target="_blank">
+      <div class="pc-logo"><img src="assets/img_c176a9b1.png" alt="Zenka" style="max-height:54px;max-width:130px;object-fit:contain;border-radius:50%;"></div>
+      <div class="pc-name">Zenka Cafe</div>
+      <div class="pc-role">Content Production · Instagram</div>
+      <span class="pc-cta">CLICK TO SEE MY WORK &rarr;</span>
+    </a>
+
+    <a class="pc-card" style="grid-column:span 3;" href="https://www.instagram.com/skyline_mayson/" target="_blank">
+      <div class="pc-logo"><img src="assets/img_ad05f4cb.png" alt="Skyline Dubai" style="max-height:48px;max-width:130px;object-fit:contain;filter:brightness(0);opacity:.8;"></div>
+      <div class="pc-name">Skyline Dubai</div>
+      <div class="pc-role">Strategy &amp; Content Editing · Dubai</div>
+      <span class="pc-cta">CHECK THEIR INSTAGRAM &rarr;</span>
+    </a>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="contact" style="padding:80px 56px;background:#200e92;">
+  <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:48px;flex-wrap:wrap;">
+    
+    <div style="flex:1;min-width:280px;">
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,5vw,64px);color:#fff;line-height:1;margin-bottom:32px;">LET'S WORK<br>TOGETHER.</div>
+      <div style="display:flex;flex-direction:column;gap:12px;">
+        <a href="mailto:sakowski.studio@gmail.com" style="display:inline-flex;align-items:center;gap:12px;padding:14px 24px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:4px;text-decoration:none;color:#fff;font-size:13px;font-weight:500;letter-spacing:.02em;transition:background .18s;max-width:340px;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          sakowski.studio@gmail.com
+        </a>
+        <a href="https://www.instagram.com/sakowski.studio" target="_blank" style="display:inline-flex;align-items:center;gap:12px;padding:14px 24px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:4px;text-decoration:none;color:#fff;font-size:13px;font-weight:500;letter-spacing:.02em;transition:background .18s;max-width:340px;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5" fill="currentColor"/></svg>
+          @sakowski.studio
+        </a>
+      </div>
+    </div>
+
+    <div style="display:flex;align-items:center;justify-content:flex-end;padding-top:8px;">
+      <img src="assets/img_fb4520db.png" alt="AS Studio" style="height:34px;object-fit:contain;filter:invert(1);opacity:0.8;">
+    </div>
+
+  </div>
+</section>
+<footer>
+  <div>
+    <div class="fn">Adam Sakowski</div>
+    <div class="fsub">@sakowski.studio &middot; Content &amp; Media Strategist · Creative Director &middot; Wroclaw</div>
+  </div>
+  <div class="flinks">
+    <a href="https://instagram.com/sakowski.studio" target="_blank">Instagram</a>
+    <a href="mailto:sakowski.studio@gmail.com">Email</a>
+  </div>
+</footer>
+
+<div class="overlay" id="overlay">
+  <div class="modal" id="modal">
+    <button class="mx" id="mclose">&times;</button>
+    <div id="mb" class="mbadge"></div>
+    <div id="mband" class="mband"></div>
+    <div id="mtype" class="mtype"></div>
+    <div id="mtags" class="mtags"></div>
+    <p id="mdesc" class="mdesc"></p>
+    <div id="mres"></div>
+  </div>
+</div>
+
+<script>
+document.querySelectorAll('.navlink').forEach(function(a){
+  a.addEventListener('click',function(e){
+    e.preventDefault();
+    var id=this.getAttribute('data-target')||this.getAttribute('href');
+    if(id) id=id.replace('#','');
+    var el=document.getElementById(id);
+    if(el) el.scrollIntoView({behavior:'smooth'});
+  });
+});
+
+var D={};
+D.chleboteka={badge:"Social Bloom",brand:"Chleboteka",type:"Creative Direction · Influencer · Events",tags:["Creative Direction","Content Strategy","Event Management","Influencer Campaign Concepting"],desc:"A new creative direction was developed for Chleboteka following its rebrand - Jak po maśle (Smooth Like Butter) - shifting from product-only content toward lifestyle and community storytelling. Work included influencer campaign concepting for the online store and a sold-out launch event for the new chocolate collection.",results:[{v:"↑",l:"Sales growth*"},{v:"Sold out",l:"Launch event"},{v:"✓",l:"Influencer campaign"}],note:"* Exact figures withheld out of respect for client data privacy.",workUrl:null,igUrl:"https://www.instagram.com/chleboteka/",eventUrl:"https://www.instagram.com/p/DX_MWxAsYx5/",eventLabel:"CHECK THE EVENT"};
+D.zeccer={badge:"Social Bloom",brand:"Zeccer",type:"TikTok Strategy",tags:["TikTok","Content Strategy"],desc:"TikTok-first content strategy for Zeccer - creative direction and content framework optimised for short-form video, building brand affinity through entertainment-led content.",results:[{v:"+213%",l:"Saves growth"}],note:null,workUrl:null,igUrl:null,tiktoks:["https://www.tiktok.com/@zeccer.polska/video/7622953825816546593","https://www.tiktok.com/@zeccer.polska/video/7623684676170878240","https://www.tiktok.com/@zeccer.polska/video/7613049427137187094","https://www.tiktok.com/@zeccer.polska/video/7616369164067917089"]};
+D.fc={badge:"Social Bloom",brand:"FC Nalesniki",type:"TikTok Strategy / Format Development",tags:["TikTok","Format Strategy","Performance Analysis"],desc:"During work at Social Bloom, a concept-driven TikTok strategy was built around POVs and voiceovers. Top formats reached 50k-100k+ views.",results:[{v:"+213%",l:"Saves growth"},{v:"+76%",l:"Views growth"}],note:"Own calculations from public data",links:[{u:"https://www.tiktok.com/@fc.nalesniki",l:"TikTok Profile"}]};
+D.zoa={badge:"Social Bloom",brand:"ZOA Pilates",type:"Launch Campaign · Content Strategy",tags:["Launch Campaign","Content Strategy","Instagram"],desc:"Full launch campaign for ZOA Pilates, a premium reformer and wellness studio. Built the content strategy from zero - brand voice, content pillars, visual direction. The launch drove explosive initial growth, validating the positioning among the target wellness audience.",results:[{v:"+578%",l:"Followers in 60 days"},{v:"+1381%",l:"Reach growth"}],note:null,workUrl:null,igUrl:"https://www.instagram.com/zoa.pilates.studio/"};
+D.tosti={badge:"Social Bloom",brand:"Tosti",type:"Opening Campaign · Creative Direction · Content Strategy",tags:["Opening Campaign","Creative Direction","Content Strategy"],desc:"Pre-launch creative campaign for Tosti, a new food venue in Wrocław. The concept 'IM SO TOSTI' was a teaser campaign building anticipation before opening - covering opening campaign strategy, creative direction, and content execution.",results:[],note:null,workUrl:null,igUrl:"https://www.instagram.com/tosti.streetfood/"};
+D.unident={badge:"Social Bloom",brand:"Unident Union",type:"ManyChat Automation · Instagram Funnels",tags:["ManyChat Automation","Content Automation","Instagram Funnels","Lead Generation"],desc:"ManyChat automation architecture for Unident Union - a premium dental brand. Keyword-triggered DM sequences and comment-to-DM funnels built to convert content engagement into qualified leads.",results:[{v:"82%",l:"Avg comment-to-DM CTR"},{v:"93%",l:"Peak CTR single automation"}],note:null,workUrl:null,igUrl:null};
+D.illustre={badge:"Social Bloom",brand:"Illustre",type:"ManyChat Automation · Instagram Funnels",tags:["ManyChat Automation","Content Automation","Lead Generation"],desc:"ManyChat automation architecture for Illustre - a premium aesthetic medicine brand. Part of the same automation project as Unident Union, building comment-to-DM funnels to convert organic reach into qualified consultations.",results:[],note:null,workUrl:null,igUrl:null};
+D.inlei={badge:"Social Bloom",brand:"InLei",type:"Content Strategy / Visual Communication",tags:["Content Strategy","Visual Communication"],desc:"During work at Social Bloom, the full content strategy and visual communication direction were built for InLei.",results:[],links:[{u:"https://www.instagram.com/inlei_polska/",l:"Instagram Profile"}]};
+D.nacanapa={badge:"Social Bloom",brand:"Nacanapa",type:"Brand Strategy / Creative Concept",tags:["Brand Strategy","Creative Concept","Podcast Format"],desc:"During work at Social Bloom, a brand strategy was built positioning Nacanapa as a cultural lifestyle brand. The concept Na Kanapie spawned a podcast series format.",results:[],note:"Strategic concept only.",links:[]};
+D.easylivin={badge:"Social Bloom",brand:"Easy Livin",type:"Brand Strategy · Content Direction",tags:["Brand Strategy","Content Direction","Concept"],desc:"During work at Social Bloom, a full brand strategy was built for Easy Livin around the concept 'But make it easy'. The concept integrated self-care rituals into the fast-paced lifestyle of the target audience - presenting them as part of situations they already resonated with, dismantling the belief that taking care of yourself requires a complex, time-consuming routine.",results:[],note:null,workUrl:null,igUrl:null};
+D.piekne={badge:"Social Bloom",brand:"Piekne Tapety",type:"Content Strategy / Brand Positioning",tags:["Content Strategy","E-commerce"],desc:"During work at Social Bloom, a full organic content strategy was built repositioning Piekne Tapety from product catalogue to lifestyle storytelling.",results:[],links:[]};
+D.olio={badge:"Social Bloom",brand:"Olio",type:"Content Direction / Video Production",tags:["Content Direction","Content Concepting"],desc:"During work at Social Bloom, content scenarios were developed and video production directed for Olio.",results:[],links:[{u:"https://www.instagram.com/olio.napoletana.wroclaw/",l:"Profile"},{u:"https://www.instagram.com/p/DYWrZ0BuoCQ/",l:"Example 1"},{u:"https://www.instagram.com/p/DXwcTd-C4Sd/",l:"Example 2"}]};
+D.muffo={badge:"Social Bloom",brand:"Muffo",type:"Content Concepting",tags:["Content Concepting","Creative Direction"],desc:"Content concepting for Muffo - developing ideas, formats and creative directions for their content team to execute.",results:[],note:null,workUrl:null,igUrl:null};
+D.cinnify={badge:"Social Bloom",brand:"Cinnify",type:"Content Concepts",tags:["Content Concepts","Social Media"],desc:"Content concept development for Cinnify within the Social Bloom agency framework.",results:[],note:null,workUrl:null,igUrl:"https://www.instagram.com/p/DYeLzr6MNpm/"};
+D.polka={badge:"Social Bloom",brand:"Polka Pilates",type:"Content Concepting",tags:["Content Concepting","Creative Direction"],desc:"Content concepting for Polka Pilates - developing content ideas and creative formats for the brand's team to record and execute.",results:[],note:null,workUrl:null,igUrl:null};
+D.bestick={badge:"Freelance",brand:"Bestick",type:"Full-Stack Social · Stockholm Startup",tags:["Instagram","TikTok","Creative Direction","Zero Budget"],desc:"Bestick is a food events startup in Stockholm focused on connecting people through shared dining experiences. I was solely responsible for social media and marketing - covering end-to-end content execution across Instagram and TikTok, including creative direction, design, content production, recording, editing, and being the face of the content. I also managed the community, executing all initiatives within a zero-budget environment.",results:[{v:"190",l:"QR Scans"},{v:"25%",l:"Offline CVR"}],note:null,workUrl:"https://drive.google.com/file/d/1ISRqjjJlYl5J5948clDX_evLFzX-PPBy/view?usp=sharing",igUrl:"https://www.instagram.com/besticksthlm/"};
+D.skyline={badge:"Freelance",brand:"Skyline Dubai",type:"Strategy & Content Editing",tags:["Strategy","Content","Dubai"],desc:"Content strategy and editing work for a Dubai-based client. Strategic positioning and content direction.",results:[],note:null,workUrl:null,igUrl:"https://www.instagram.com/skyline_mayson/"};
+D.iskra={badge:"Personal",brand:"Iskra",type:"Branding · Content Strategy · Creative Direction",tags:["Branding","Content Strategy","Creative Direction","Visual Identity"],desc:"Created the whole visual communication, digital products, content strategy, and a creative direction for Iskra - a women-focused brand.",results:[],note:null,workUrl:null,igUrl:"https://www.instagram.com/iskra.women/"};
+D.fer={badge:"Academic",brand:"Fer Koffie",type:"Content & Media Strategy · Master's Thesis",tags:["Content Strategy","Media Strategy","Brand Awareness"],desc:"As part of my master's thesis, I developed a comprehensive content strategy for Fer Koffie, a café in Leeuwarden struggling with low brand awareness and unclear positioning. I created both content and media strategies - focusing on increasing brand visibility within the local community, especially among students, and highlighting the café's role as a social hub combating loneliness in Leeuwarden.",results:[],note:null,workUrl:"https://drive.google.com/file/d/14EbUdjNIgio-Py7ShrQrD98aPaBaL-J1/view?usp=sharing",igUrl:"https://www.instagram.com/ferkoffie/"};
+D.zenka={badge:"Social Bloom",brand:"Zenka Cafe",type:"Content Production · Instagram Stories",tags:["Content Production","Instagram"],desc:"Instagram Stories content for Zenka Cafe - atmospheric, aesthetic visual communication matching the brand's premium positioning.",results:[],note:null,workUrl:"https://drive.google.com/file/d/19imhlZb22igWB63kvEkyYdE8HLH88bXc/view?usp=sharing",igUrl:"https://www.instagram.com/zenkacafe/"};
+
+function openModal(id){
+  var d=D[id];if(!d)return;
+  var b=document.getElementById('mb');
+  b.textContent=d.badge;
+  b.className='mbadge'+(d.badge!=='Social Bloom'?' free':'');
+  document.getElementById('mband').textContent=d.brand;
+  document.getElementById('mtype').textContent=d.type;
+  document.getElementById('mtags').innerHTML=d.tags.map(function(t){return'<span class="mtag">'+t+'</span>';}).join('');
+  document.getElementById('mdesc').textContent=d.desc;
+  var r=document.getElementById('mres');
+  var h='';
+  if(d.results&&d.results.length){h+='<div class="mrl">Results</div><div class="mmets">';d.results.forEach(function(m){h+='<div><div class="mval">'+m.v+'</div><div class="mlbl">'+m.l+'</div></div>';});h+='</div>';}
+  if(d.note)h+='<p class="mnote">'+d.note+'</p>';
+  if(d.links&&d.links.length){h+='<div class="mlinks">';d.links.forEach(function(lk){h+='<a href="'+lk.u+'" target="_blank" class="mlink">'+lk.l+'</a>';});h+='</div>';}
+  r.innerHTML=h;
+  document.getElementById('overlay').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeModal(){document.getElementById('overlay').classList.remove('open');document.body.style.overflow='';}
+document.getElementById('mclose').addEventListener('click',closeModal);
+document.getElementById('overlay').addEventListener('click',function(e){if(e.target===this)closeModal();});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeModal();});
+document.querySelectorAll('.bb').forEach(function(btn){btn.addEventListener('click',function(){openModal(this.getAttribute('data-id'));});});
+
+var obs=new IntersectionObserver(function(entries){entries.forEach(function(e,i){if(e.isIntersecting){setTimeout(function(){e.target.classList.add('v');},i*55);obs.unobserve(e.target);}});},{threshold:0.07});
+document.querySelectorAll('.fi').forEach(function(el){obs.observe(el);});
+</script>
+</body>
+</html<img src="assets/img_cf3299f4.png" alt="AS Studio" style="height:60px;object-fit:contain;filter:invert(1);opacity:0.75;">
