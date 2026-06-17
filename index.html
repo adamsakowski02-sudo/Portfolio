@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Adam Sakowski - Content & Media Strategist</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
 <style>
 :root{
   --blue:#200e92;
@@ -37,9 +37,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .hr::before{content:'';position:absolute;left:0;top:0;bottom:0;width:70%;background:linear-gradient(to right,var(--white) 0%,rgba(255,255,255,0.85) 20%,rgba(255,255,255,0.4) 45%,rgba(255,255,255,0) 70%);z-index:1}
 .htag{display:inline-flex;align-items:center;gap:10px;font-size:10px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--blue);margin-bottom:32px}
 .htag::before{content:'';width:24px;height:1px;background:var(--blue)}
-h1{font-family:'Playfair Display',serif;font-weight:600;font-size:clamp(56px,8.5vw,116px);line-height:0.88;letter-spacing:-0.01em;color:var(--black);margin-bottom:32px}
-h1 em{font-family:'Cormorant Garamond',serif;font-weight:600;font-style:italic;color:var(--blue);font-size:1.15em;letter-spacing:0;display:inline-block}
-.st em,.ah2 em{font-family:'Cormorant Garamond',serif;font-weight:600;font-style:italic;color:var(--blue);font-size:1.1em;letter-spacing:0}
+h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(56px,8.5vw,116px);line-height:0.88;letter-spacing:-0.01em;color:var(--black);margin-bottom:32px}
+h1 em{font-family:'DM Sans',serif;font-style:italic;color:var(--blue)}
 .hsub{font-size:14px;line-height:1.8;color:var(--grey);max-width:400px;margin-bottom:44px;font-weight:300}
 .hcta{display:flex;gap:12px}
 .btn{display:inline-flex;align-items:center;gap:8px;padding:13px 26px;font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;transition:all 0.2s;border:none;cursor:pointer}
@@ -49,7 +48,7 @@ h1 em{font-family:'Cormorant Garamond',serif;font-weight:600;font-style:italic;c
 /* TICKER */
 .ticker{background:var(--blue);padding:12px 0;overflow:hidden;white-space:nowrap}
 .ttrack{display:inline-flex;animation:tick 28s linear infinite}
-.ti{font-family:'Playfair Display',serif;font-weight:600;font-size:14px;letter-spacing:0.1em;color:rgba(255,255,255,0.88);padding:0 26px}
+.ti{font-family:'Bebas Neue',sans-serif;font-size:14px;letter-spacing:0.1em;color:rgba(255,255,255,0.88);padding:0 26px}
 .ts{color:rgba(255,255,255,0.3)}
 @keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
@@ -58,7 +57,7 @@ h1 em{font-family:'Cormorant Garamond',serif;font-weight:600;font-style:italic;c
 .sb::-webkit-scrollbar{display:none}
 .si{flex:1;min-width:180px;padding:36px 40px;border-right:1px solid var(--gl)}
 .si:last-child{border-right:none}
-.sn{font-family:'Playfair Display',serif;font-weight:600;font-size:clamp(32px,3.8vw,48px);color:var(--blue);line-height:1}
+.sn{font-family:'Bebas Neue',sans-serif;font-size:clamp(32px,3.8vw,48px);color:var(--blue);line-height:1}
 .sl{font-size:11px;color:var(--grey);margin-top:5px;text-transform:uppercase;letter-spacing:0.08em}
 .sb2{font-size:10px;color:#bbb;margin-top:3px}
 
@@ -66,7 +65,7 @@ h1 em{font-family:'Cormorant Garamond',serif;font-weight:600;font-style:italic;c
 section{padding:96px 56px}
 .ey{font-size:10px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--blue);margin-bottom:10px}
 .eyd{color:var(--grey)}
-.st{font-family:'Playfair Display',serif;font-weight:600;font-size:clamp(40px,5vw,64px);line-height:0.95;letter-spacing:-0.01em;margin-bottom:56px;color:var(--black)}
+.st{font-family:'Bebas Neue',sans-serif;font-size:clamp(40px,5vw,64px);line-height:0.95;letter-spacing:-0.01em;margin-bottom:56px;color:var(--black)}
 .std{color:var(--white)}
 
 /* CASE STUDIES */
@@ -84,13 +83,13 @@ section{padding:96px 56px}
 .case-info{padding:52px;display:flex;flex-direction:column;justify-content:space-between;background:var(--white)}
 .abadge{display:inline-flex;align-items:center;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:4px 10px;background:var(--blue);color:var(--white);margin-bottom:20px;width:fit-content}
 .abadge.free{background:var(--off);color:var(--grey);border:1px solid var(--gl)}
-.cbr{font-family:'Playfair Display',serif;font-weight:600;font-size:44px;letter-spacing:0.02em;color:var(--black);line-height:1;margin-bottom:4px}
+.cbr{font-family:'Bebas Neue',sans-serif;font-size:44px;letter-spacing:0.02em;color:var(--black);line-height:1;margin-bottom:4px}
 .cnum{font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--grey);margin-bottom:16px}
 .tags{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:20px}
 .tag{font-size:9px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;padding:4px 9px;background:var(--off);color:var(--grey);border:1px solid var(--gl)}
 .cbody{font-size:13px;line-height:1.8;color:#555;margin-bottom:28px;font-weight:300;flex:1}
 .mets{display:flex;gap:24px;flex-wrap:wrap;border-top:1px solid var(--gl);padding-top:24px;align-items:flex-end}
-.mv{font-family:'Playfair Display',serif;font-weight:600;font-size:34px;color:var(--blue);line-height:1}
+.mv{font-family:'Bebas Neue',sans-serif;font-size:34px;color:var(--blue);line-height:1}
 .ml{font-size:10px;color:var(--grey);text-transform:uppercase;letter-spacing:0.08em;margin-top:3px}
 .cnote{font-size:11px;color:#bbb;font-style:italic;margin-top:12px}
 
@@ -106,7 +105,7 @@ section{padding:96px 56px}
 .pt th{font-size:9px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--grey);padding:0 0 10px;text-align:left;border-bottom:1px solid var(--gl)}
 .pt td{padding:9px 0;border-bottom:1px solid var(--gl);font-size:12px;color:var(--black)}
 .pt td:first-child{color:var(--grey)}
-.gv{font-family:'Playfair Display',serif;font-weight:600;font-size:16px;color:var(--blue) !important;letter-spacing:0.02em}
+.gv{font-family:'Bebas Neue',sans-serif;font-size:16px;color:var(--blue) !important;letter-spacing:0.02em}
 
 /* ZECCER full width case */
 .case-full{background:var(--off);border:1px solid var(--gl);padding:56px;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
@@ -122,7 +121,7 @@ section{padding:96px 56px}
 .cey{font-size:9px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;margin-bottom:18px;opacity:0.45}
 .c-tosti .cey{color:var(--black)}
 .c-nacanapa .cey,.c-unident .cey{color:var(--white)}
-.cti{font-family:'Playfair Display',serif;font-weight:600;font-size:clamp(40px,5vw,64px);line-height:0.88;letter-spacing:-0.01em;margin-bottom:20px}
+.cti{font-family:'Bebas Neue',sans-serif;font-size:clamp(40px,5vw,64px);line-height:0.88;letter-spacing:-0.01em;margin-bottom:20px}
 .c-tosti .cti{color:var(--black)}
 .c-nacanapa .cti{color:#A68FFF}
 .c-unident .cti{color:var(--white)}
@@ -137,7 +136,7 @@ section{padding:96px 56px}
 .tosti-img-wrap img{width:100%;height:100%;object-fit:cover;object-position:center 30%}
 .u-stats{display:flex;flex-direction:column;gap:14px}
 .u-stat{padding:22px 24px;background:rgba(255,255,255,0.05);border-left:2px solid var(--blue)}
-.u-val{font-family:'Playfair Display',serif;font-weight:600;font-size:44px;color:var(--blue);line-height:1}
+.u-val{font-family:'Bebas Neue',sans-serif;font-size:44px;color:var(--blue);line-height:1}
 .u-lbl{font-size:10px;color:rgba(255,255,255,0.3);text-transform:uppercase;letter-spacing:0.08em;margin-top:3px}
 .u-sub{font-size:11px;color:rgba(255,255,255,0.18);font-style:italic;margin-top:2px}
 
@@ -150,7 +149,7 @@ section{padding:96px 56px}
 .bb:hover .br2{color:rgba(255,255,255,0.6)}
 .bb:hover .bbadge{opacity:0}
 .bimg{max-height:40px;max-width:130px;width:auto;object-fit:contain;filter:opacity(0.75);transition:filter 0.2s}
-.btxt{font-family:'Playfair Display',serif;font-weight:600;font-size:13px;letter-spacing:0.05em;color:rgba(0,0,0,0.55);transition:color 0.2s;line-height:1.2}
+.btxt{font-family:'Bebas Neue',sans-serif;font-size:13px;letter-spacing:0.05em;color:rgba(0,0,0,0.55);transition:color 0.2s;line-height:1.2}
 .br2{font-size:9px;color:#ccc;letter-spacing:0.1em;text-transform:uppercase;margin-top:5px;transition:color 0.2s}
 .bbadge{font-size:8px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--blue);margin-top:3px;transition:opacity 0.2s}
 .bfree{font-size:8px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#bbb;margin-top:3px;transition:opacity 0.2s}
@@ -158,26 +157,26 @@ section{padding:96px 56px}
 /* AGENCY */
 #agency{background:var(--off)}
 .ag{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start}
-.ah2{font-family:'Playfair Display',serif;font-weight:600;font-size:clamp(36px,4vw,54px);line-height:1;color:var(--black);margin-bottom:18px}
+.ah2{font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,4vw,54px);line-height:1;color:var(--black);margin-bottom:18px}
 .ah2 span{color:var(--blue)}
 .adesc{font-size:13px;line-height:1.8;color:#555;font-weight:300;margin-bottom:32px}
 .pils{display:flex;flex-direction:column}
 .pil{display:flex;gap:16px;padding:15px 0;border-bottom:1px solid var(--gl)}
 .pil:first-child{border-top:1px solid var(--gl)}
-.pnum{font-family:'Playfair Display',serif;font-weight:600;font-size:13px;color:var(--blue);width:20px;flex-shrink:0;padding-top:1px}
+.pnum{font-family:'Bebas Neue',sans-serif;font-size:13px;color:var(--blue);width:20px;flex-shrink:0;padding-top:1px}
 .ptxt{font-size:13px;color:#444;line-height:1.6}
 .wsec{margin-top:40px}
 .wsec-label{font-size:10px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey);margin-bottom:14px}
 .wgrid{display:flex;flex-direction:column;gap:2px}
 .wcard{background:var(--white);padding:20px 24px;border:1px solid var(--gl)}
-.wtit{font-family:'Playfair Display',serif;font-weight:600;font-size:17px;color:var(--black);letter-spacing:0.02em;margin-bottom:5px}
+.wtit{font-family:'Bebas Neue',sans-serif;font-size:17px;color:var(--black);letter-spacing:0.02em;margin-bottom:5px}
 .wdesc{font-size:12px;color:var(--grey);line-height:1.6}
 
 /* EDUCATION */
 #education{background:var(--white)}
 .edg{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-bottom:2px}
 .edc{background:var(--off);padding:44px;border:1px solid var(--gl)}
-.edd{font-family:'Playfair Display',serif;font-weight:600;font-size:24px;color:var(--black);letter-spacing:0.02em;margin-bottom:5px}
+.edd{font-family:'Bebas Neue',sans-serif;font-size:24px;color:var(--black);letter-spacing:0.02em;margin-bottom:5px}
 .eds{font-size:13px;color:var(--blue);font-weight:500;margin-bottom:14px}
 .edsp{font-size:13px;color:var(--grey);line-height:1.6}
 .cr{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
@@ -195,14 +194,14 @@ section{padding:96px 56px}
 .mx:hover{color:var(--black)}
 .mbadge{display:inline-flex;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:4px 10px;background:var(--blue);color:var(--white);margin-bottom:14px}
 .mbadge.free{background:var(--off);color:var(--grey);border:1px solid var(--gl)}
-.mband{font-family:'Playfair Display',serif;font-weight:600;font-size:48px;color:var(--black);letter-spacing:0.02em;line-height:1;margin-bottom:5px}
+.mband{font-family:'Bebas Neue',sans-serif;font-size:48px;color:var(--black);letter-spacing:0.02em;line-height:1;margin-bottom:5px}
 .mtype{font-size:12px;color:var(--blue);font-weight:600;letter-spacing:0.05em;margin-bottom:20px}
 .mtags{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:20px}
 .mtag{font-size:9px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:4px 9px;background:var(--off);color:var(--black);border:1px solid var(--gl)}
 .mdesc{font-size:13px;line-height:1.8;color:#444;font-weight:300;margin-bottom:24px}
 .mrl{font-size:9px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey);border-top:1px solid var(--gl);padding-top:20px;margin-bottom:14px}
 .mmets{display:flex;gap:24px;flex-wrap:wrap}
-.mval{font-family:'Playfair Display',serif;font-weight:600;font-size:38px;color:var(--blue);line-height:1}
+.mval{font-family:'Bebas Neue',sans-serif;font-size:38px;color:var(--blue);line-height:1}
 .mlbl{font-size:10px;color:var(--grey);text-transform:uppercase;letter-spacing:0.08em;margin-top:2px}
 .mnote{font-size:12px;color:#aaa;font-style:italic;margin-top:10px;line-height:1.6}
 .mlinks{margin-top:16px;display:flex;flex-wrap:wrap;gap:8px}
@@ -211,7 +210,7 @@ section{padding:96px 56px}
 
 
 footer{background:var(--black);padding:40px 56px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px}
-.fn{font-family:'Playfair Display',serif;font-weight:600;font-size:17px;color:var(--white);letter-spacing:0.06em}
+.fn{font-family:'Bebas Neue',sans-serif;font-size:17px;color:var(--white);letter-spacing:0.06em}
 .fsub{font-size:11px;color:rgba(255,255,255,0.3);margin-top:3px}
 .flinks{display:flex;gap:18px}
 .flinks a{font-size:11px;color:rgba(255,255,255,0.35);text-decoration:none;letter-spacing:0.08em;text-transform:uppercase;transition:color 0.2s}
@@ -318,7 +317,7 @@ footer{background:var(--black);padding:40px 56px;display:flex;justify-content:sp
 .pc-card:hover{border-color:#200e92;box-shadow:0 4px 20px rgba(34,0,204,.07);}
 .pc-logo{height:60px;display:flex;align-items:center;justify-content:center;margin-bottom:14px;}
 .pc-logo img{max-height:54px;max-width:130px;object-fit:contain;}
-.pc-logo span{font-family:'Playfair Display',serif;font-weight:600;letter-spacing:1px;color:#0a0a0a;}
+.pc-logo span{font-family:'Bebas Neue',sans-serif;letter-spacing:1px;color:#0a0a0a;}
 .pc-name{font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#0a0a0a;margin-bottom:4px;}
 .pc-role{font-size:11px;color:#888;line-height:1.5;margin-bottom:20px;flex:1;}
 .pc-cta{display:inline-flex;align-items:center;gap:6px;padding:10px 20px;background:#200e92;color:#fff;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;border-radius:3px;margin-top:auto;width:100%;justify-content:center;box-sizing:border-box;}
@@ -391,7 +390,7 @@ footer{background:var(--black);padding:40px 56px;display:flex;justify-content:sp
 <section id="work">
   <div class="fi">
     <div class="ey">01 - Selected Work</div>
-    <div class="st">Case <em>Studies</em></div>
+    <div class="st">Case Studies</div>
   </div>
 
   <div class="cases">
@@ -487,25 +486,25 @@ footer{background:var(--black);padding:40px 56px;display:flex;justify-content:sp
                 <td style="padding:9px 0;color:rgba(255,255,255,0.7);font-size:11px;">Impressions</td>
                 <td style="text-align:right;padding:9px 4px;color:rgba(255,255,255,0.35);font-size:11px;">433</td>
                 <td style="text-align:right;padding:9px 4px;color:rgba(255,255,255,0.7);font-size:11px;">21 750</td>
-                <td style="text-align:right;padding:9px 0;font-family:'Playfair Display',serif;font-weight:600;font-size:15px;color:#fff;letter-spacing:.02em;">+4,922%</td>
+                <td style="text-align:right;padding:9px 0;font-family:'Bebas Neue',sans-serif;font-size:15px;color:#fff;letter-spacing:.02em;">+4,922%</td>
               </tr>
               <tr style="border-bottom:0.5px solid rgba(255,255,255,0.08);">
                 <td style="padding:9px 0;color:rgba(255,255,255,0.7);font-size:11px;">Likes</td>
                 <td style="text-align:right;padding:9px 4px;color:rgba(255,255,255,0.35);font-size:11px;">17</td>
                 <td style="text-align:right;padding:9px 4px;color:rgba(255,255,255,0.7);font-size:11px;">480</td>
-                <td style="text-align:right;padding:9px 0;font-family:'Playfair Display',serif;font-weight:600;font-size:15px;color:#fff;letter-spacing:.02em;">+2,724%</td>
+                <td style="text-align:right;padding:9px 0;font-family:'Bebas Neue',sans-serif;font-size:15px;color:#fff;letter-spacing:.02em;">+2,724%</td>
               </tr>
               <tr style="border-bottom:0.5px solid rgba(255,255,255,0.08);">
                 <td style="padding:9px 0;color:rgba(255,255,255,0.7);font-size:11px;">Comments</td>
                 <td style="text-align:right;padding:9px 4px;color:rgba(255,255,255,0.35);font-size:11px;">0.44</td>
                 <td style="text-align:right;padding:9px 4px;color:rgba(255,255,255,0.7);font-size:11px;">8</td>
-                <td style="text-align:right;padding:9px 0;font-family:'Playfair Display',serif;font-weight:600;font-size:15px;color:#fff;letter-spacing:.02em;">+1,718%</td>
+                <td style="text-align:right;padding:9px 0;font-family:'Bebas Neue',sans-serif;font-size:15px;color:#fff;letter-spacing:.02em;">+1,718%</td>
               </tr>
               <tr>
                 <td style="padding:9px 0;color:rgba(255,255,255,0.7);font-size:11px;">Saves</td>
                 <td style="text-align:right;padding:9px 4px;color:rgba(255,255,255,0.35);font-size:11px;">0.33</td>
                 <td style="text-align:right;padding:9px 4px;color:rgba(255,255,255,0.7);font-size:11px;">42.6</td>
-                <td style="text-align:right;padding:9px 0;font-family:'Playfair Display',serif;font-weight:600;font-size:15px;color:#fff;letter-spacing:.02em;">+12,809%</td>
+                <td style="text-align:right;padding:9px 0;font-family:'Bebas Neue',sans-serif;font-size:15px;color:#fff;letter-spacing:.02em;">+12,809%</td>
               </tr>
             </tbody>
           </table>
@@ -541,11 +540,11 @@ footer{background:var(--black);padding:40px 56px;display:flex;justify-content:sp
           <img src="assets/img_002.png" alt="ZOA Pilates" style="height:80px;object-fit:contain;opacity:0.85;">
           <div style="opacity:0.2;height:0.5px;width:60px;background:#000;"></div>
           <div>
-            <div style="font-family:'Playfair Display',serif;font-weight:600;font-size:52px;color:#200e92;line-height:1;">+556%</div>
+            <div style="font-family:'Bebas Neue',sans-serif;font-size:52px;color:#200e92;line-height:1;">+556%</div>
             <div style="font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:rgba(0,0,0,0.5);margin-top:4px;">Followers in 60 days</div>
           </div>
           <div>
-            <div style="font-family:'Playfair Display',serif;font-weight:600;font-size:52px;color:#200e92;line-height:1;">+1,286%</div>
+            <div style="font-family:'Bebas Neue',sans-serif;font-size:52px;color:#200e92;line-height:1;">+1,286%</div>
             <div style="font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:rgba(0,0,0,0.5);margin-top:4px;">Reach growth</div>
           </div>
         </div>
@@ -574,7 +573,7 @@ footer{background:var(--black);padding:40px 56px;display:flex;justify-content:sp
       <div class="case-inner">
         <div class="case-visual" style="background:#fca0f4;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:48px;text-align:center;gap:24px;">
           <div>
-            <div style="font-family:'Playfair Display',serif;font-weight:600;font-size:clamp(36px,4vw,56px);color:#1a0020;line-height:0.95;margin-bottom:10px;">FORK<br>AROUND<br>AND FIND<br>OUT.</div>
+            <div style="font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,4vw,56px);color:#1a0020;line-height:0.95;margin-bottom:10px;">FORK<br>AROUND<br>AND FIND<br>OUT.</div>
             <div style="font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(26,0,32,0.45);">Stockholm startup</div>
           </div>
           <a href="https://drive.google.com/file/d/1ISRqjjJlYl5J5948clDX_evLFzX-PPBy/view?usp=sharing" target="_blank" style="display:inline-block;padding:10px 24px;background:#1a0020;color:#fca0f4;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;border-radius:3px;text-align:center;">CLICK TO SEE MY WORK &rarr;</a>
@@ -607,12 +606,12 @@ footer{background:var(--black);padding:40px 56px;display:flex;justify-content:sp
       <div class="case-inner flip">
         <div class="case-visual" style="background:#200e92;display:flex;flex-direction:column;justify-content:space-between;padding:48px;"><div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:24px;">
           <div style="text-align:center;border-bottom:0.5px solid rgba(255,255,255,0.15);padding-bottom:24px;">
-            <div style="font-family:'Playfair Display',serif;font-weight:600;font-size:64px;color:#fff;line-height:1">82%</div>
+            <div style="font-family:'Bebas Neue',sans-serif;font-size:64px;color:#fff;line-height:1">82%</div>
             <div style="font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,0.6);margin-top:6px;">Avg comment-to-DM CTR</div>
             <div style="font-size:9px;color:rgba(255,255,255,0.3);margin-top:3px;">Across 3 active automations</div>
           </div>
           <div style="text-align:center;">
-            <div style="font-family:'Playfair Display',serif;font-weight:600;font-size:64px;color:#fff;line-height:1">93%</div>
+            <div style="font-family:'Bebas Neue',sans-serif;font-size:64px;color:#fff;line-height:1">93%</div>
             <div style="font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,0.6);margin-top:6px;">Peak CTR single automation</div>
             <div style="font-size:9px;color:rgba(255,255,255,0.3);margin-top:3px;">Keyword-triggered DM sequence</div>
           </div>
@@ -642,7 +641,7 @@ footer{background:var(--black);padding:40px 56px;display:flex;justify-content:sp
 <section id="brands">
   <div class="fi">
     <div class="eyd">
-      <div class="st">Brands Worked <em>With</em></div>
+      <div class="st">Brands Worked With</div>
       <p style="font-size:12px;color:var(--grey);margin-top:-40px;margin-bottom:20px;">Brands I worked with as part of my work at Social Bloom — click any to see scope of work.</p>
     </div>
   </div>
@@ -663,11 +662,11 @@ footer{background:var(--black);padding:40px 56px;display:flex;justify-content:sp
 <section id="agency" style="padding:80px 56px;">
   <div class="fi">
     <div class="ey">04 - Agency Experience</div>
-    <div class="st">Social <em>Bloom</em></div>
+    <div class="st">Social Bloom</div>
   </div>
   <div class="ag fi" style="grid-template-columns:1fr;">
     <div>
-      <h2 class="ah2"><span style="color:#200e92;">15 Brands.</span><br>Strategies built.<br><em>Results delivered.</em></h2>
+      <h2 class="ah2"><span style="color:#200e92;">15 Brands.</span><br>Strategies built.<br>Results delivered.</h2>
       <p class="adesc">Content and Media Strategist at Social Bloom, working across 15+ brands with full responsibility for strategy, creative direction, and campaign execution.</p>
       <div class="pils">
         <div class="pil"><span class="pnum">01</span><span class="ptxt">End-to-end content &amp; media strategy across 15+ brand accounts</span></div>
@@ -693,7 +692,7 @@ footer{background:var(--black);padding:40px 56px;display:flex;justify-content:sp
   <div class="pc-grid" style="display:grid;grid-template-columns:repeat(6,1fr);gap:22px;">
 
     <a class="pc-card" style="grid-column:span 2;" href="https://drive.google.com/file/d/1ISRqjjJlYl5J5948clDX_evLFzX-PPBy/view?usp=sharing" target="_blank">
-      <div class="pc-logo"><span style="font-family:'Playfair Display',serif;font-weight:600;font-size:26px;">BESTICK</span></div>
+      <div class="pc-logo"><span style="font-family:'Bebas Neue',sans-serif;font-size:26px;">BESTICK</span></div>
       <div class="pc-name">Bestick</div>
       <div class="pc-role">Full-Stack Social · Stockholm Startup</div>
       <span class="pc-cta">CLICK TO SEE MY WORK &rarr;</span>
@@ -707,7 +706,7 @@ footer{background:var(--black);padding:40px 56px;display:flex;justify-content:sp
     </a>
 
     <a class="pc-card" style="grid-column:span 2;" href="https://drive.google.com/file/d/1vJzr7ODIrOqmgtMFY5pH2JxpWcy9jpRZ/view?usp=sharing" target="_blank">
-      <div class="pc-logo"><span style="font-family:'Playfair Display',serif;font-weight:600;font-size:18px;">NHL STENDEN</span></div>
+      <div class="pc-logo"><span style="font-family:'Bebas Neue',sans-serif;font-size:18px;">NHL STENDEN</span></div>
       <div class="pc-name">NHL Stenden</div>
       <div class="pc-role">Content Strategy · Leeuwarden, Netherlands</div>
       <span class="pc-cta">CLICK TO SEE MY WORK &rarr;</span>
@@ -746,7 +745,7 @@ footer{background:var(--black);padding:40px 56px;display:flex;justify-content:sp
 <section id="education">
   <div class="fi">
     <div class="ey">05 &mdash; Background</div>
-    <div class="st"><em>Education</em></div>
+    <div class="st">Education</div>
   </div>
   <div class="edg fi">
     <div class="edc">
@@ -771,7 +770,7 @@ footer{background:var(--black);padding:40px 56px;display:flex;justify-content:sp
 
     <div>
       <div class="ey">05 — About</div>
-      <div class="st" style="margin-bottom:28px;">Content can look good<br>and still <em>miss the point.</em></div>
+      <div class="st" style="margin-bottom:28px;">Content can look good<br>and still miss the point.</div>
 
       <p style="font-size:15px;line-height:1.85;color:#555;font-weight:300;margin-bottom:16px;">
         It can take time, use budget and still fail to move the brand closer to its goal. That is why direction matters.
@@ -794,11 +793,8 @@ footer{background:var(--black);padding:40px 56px;display:flex;justify-content:sp
       </div>
     </div>
 
-    <div style="position:sticky;top:80px;display:flex;flex-direction:column;align-items:center;transform:rotate(-2deg);">
-      <div style="background:#fff;padding:14px 14px 50px 14px;box-shadow:0 8px 30px rgba(0,0,0,0.08);border:1px solid #f0efe9;">
-        <img src="assets/img_018.png" alt="Adam Sakowski" style="width:100%;display:block;object-fit:cover;">
-        <div style="font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;font-size:18px;color:#888;text-align:center;margin-top:16px;">— based in Wroclaw —</div>
-      </div>
+    <div style="position:sticky;top:80px;">
+      <img src="assets/img_018.png" alt="Adam Sakowski" style="width:100%;border-radius:6px;display:block;object-fit:cover;">
     </div>
 
   </div>
@@ -808,7 +804,7 @@ footer{background:var(--black);padding:40px 56px;display:flex;justify-content:sp
   <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:48px;flex-wrap:wrap;">
     
     <div style="flex:1;min-width:280px;">
-      <div style="font-family:'Playfair Display',serif;font-weight:600;font-size:clamp(36px,5vw,64px);color:#fff;line-height:1;margin-bottom:32px;">LET'S WORK<br>TOGETHER.</div>
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,5vw,64px);color:#fff;line-height:1;margin-bottom:32px;">LET'S WORK<br>TOGETHER.</div>
       <div style="display:flex;flex-direction:column;gap:12px;">
         <a href="mailto:sakowski.studio@gmail.com" style="display:inline-flex;align-items:center;gap:12px;padding:14px 24px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:4px;text-decoration:none;color:#fff;font-size:13px;font-weight:500;letter-spacing:.02em;transition:background .18s;max-width:340px;">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
